@@ -1,6 +1,7 @@
 #Import the random file 
 import random
 
+#Create list of restaurants for each area in SoCal
 def preexisting_list():
   location_picker = input("Which location do you want a list of?: ")
 

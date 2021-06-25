@@ -3,68 +3,89 @@ import random
 
 #Create list of restaurants for each area in SoCal
 def preexisting_list():
+  #Ask which location does the user want
   location_picker = input("Which location do you want a list of?: ")
-
+  
+  #Create an if statement if the user wants a list from Fountain Valley
   if location_picker == "Fountain Valley" or "FV":
     return FV()
 
+  #Create an if statement if the user wants a list from Westminster
   elif location_picker == "Westminster":
     return Westminster()
-    
+
+  #Create an if statement if the user wants a list from Garden Grove  
   elif location_picker == "Garden Grove" or "GG":
     return Garden_Grove()
 
+  #Create an if statement if the user wants a list from Santa Ana
   elif location_picker == "Santa Ana":
     return Santa_Ana()
 
+  #Create an if statement if the user wants a list from Irvine
   elif location_picker == "Irvine":
     return Irvine()
-    
+
+  #Create an if statement if the user wants a list from Tirrance 
   elif location_picker == "Torrance":
     return Torrance()
 
+  #Create an if statement if the user wants a list from Los Angeles
   elif location_picker == "Los Angeles" or "LA":
     return LA()
 
+  #Create an if statement if the user wants a list from Huntington Beach
   elif location_picker == "Huntington Beach" or "HB":
     print(Huntington_Beach())
 
+  #Create an if statement if the user wants a list from Irvine
   elif location_picker == "Irvine":
     print(Irvine())  
 
+
 def Torrance():
+  #Create list for Torrance
   Torrance_list = ["Kagura", "Bowl Thai", "Torimatsu", "Azuma", "On + On Kitchen", "Boiling Point"]
   return Torrance_list
 
 def Huntington_Beach():
+  #Create list for Hubntington Beach
   HB_List = ["Sushi On Fire", "Duke's Huntington Beach", "Charlie's Gyros", "Blue Gold", "Nori Poke Sushi"]
   return HB_List
+  
 def Irvine():
+  #Create list for Irvine 
   Irvine_list = ["House of ShabuShabu", "Curry House CoCo Ichibanya", "Krave Asian Fusion", "Kebab Shop", "Kura Sushi"]
   return Irvine_list
+
 def Santa_Ana():
+  #Create list for Santa Ana
   SA_list = ["Whealthy", "Kaizen Shabu", "The Block", "AYCE Sushi SCM", "Koco Sushi"]
   return SA_list
 
 def Garden_Grove():
+  #Create list for Garden Grove
   GG_List = ["Mochinut", "Shawarma House", "Hodori Snack", "Duck Donuts", "Cafe Orange", "Red Castle", "Star BBQ", "Boiling Point", "Rodeo 39"]
   return GG_List
 
 def Westminster():
+  #Create list for Westminster
   Westminter_list = ["Grinkgo Katsu", "Silverlake Ramen", "SoCal Wings", "Chungchun Rice Hotdog"]
   return Westminter_list
 
 def FV():
+  #Create list for Fountain Valley
   Fv_list = ["Ikram Grill", "Hot-Off-the-Gril", "Vox Kitchen", "Kensho", "Nep Cafe", "Red Flame", "Sabrosada", "Taco Bell", "Project Poke", "Full Moon", "Nikado", "Dennys"]
   return Fv_list
 
 def LA():
+  #Create list for Los Angeles
   LA_list = ["Perch", "Hayoto", "Marugame Monzo", "Chinchikurin", "PASTA e PASTA by Allegro"]
   return LA_list
 
 #Create a function that will choose which place based on a random number chosen
 def food_decider1(list1):
-  random_num = random.randrange(0, (len(list1))+1)
+  random_num = random.randrange(0, (len(list1)))
   print()
   print("Go here:", list1[random_num])
   print("Have a good day!")
@@ -74,10 +95,11 @@ def main():
   Food_list = []
   #Create a variable
   i = 0
-  print("Hello! I will help you decide places to go since you can not decide!")
+  print("Hello! I will help you decide places to go since you can not decide! (Orange and Los Angeles County Edition")
   print()
   option1 = input("Do you want a preexisting list of foods or do you want to create a list? Enter Preexisting or New List: ")
   
+  #Create an if statement if the user wants a preexisting list
   if option1 == 'Preexisting':
     Food_list=preexisting_list()
     print("here")
@@ -130,5 +152,6 @@ def main():
   else:
     print()
     print("Try Again")
-  #Call the main function
+
+#Call the main function
 main()

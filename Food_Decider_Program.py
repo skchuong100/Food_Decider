@@ -7,7 +7,7 @@ def preexisting_list():
   location_picker = input("Which location do you want a list of?: ")
   
   #Create an if statement if the user wants a list from Fountain Valley
-  if location_picker == "Fountain Valley":
+  if location_picker == "Fountain Valley" or location_picker == "FV":
     return FV()
 
   #Create an if statement if the user wants a list from Westminster
@@ -15,11 +15,11 @@ def preexisting_list():
     return Westminster()
 
   #Create an if statement if the user wants a list from Garden Grove  
-  elif location_picker == "Garden Grove":
+  elif location_picker == "Garden Grove" or location_picker == "GG":
     return Garden_Grove()
 
   #Create an if statement if the user wants a list from Santa Ana
-  elif location_picker == "Santa Ana":
+  elif location_picker == "Santa Ana" or location_picker == "SA":
     return Santa_Ana()
 
   #Create an if statement if the user wants a list from Irvine
@@ -31,11 +31,11 @@ def preexisting_list():
     return Torrance()
 
   #Create an if statement if the user wants a list from Los Angeles
-  elif location_picker == "Los Angeles":
+  elif location_picker == "Los Angeles" or location_picker == "LA":
     return LA()
 
   #Create an if statement if the user wants a list from Huntington Beach
-  elif location_picker == "Huntington Beach":
+  elif location_picker == "Huntington Beach" or location_picker == "HB":
     return Huntington_Beach()
 
   #Create an if statement if the user wants a list from Irvine

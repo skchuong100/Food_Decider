@@ -7,7 +7,7 @@ def preexisting_list():
   location_picker = input("Which location do you want a list of?: ")
   
   #Create an if statement if the user wants a list from Fountain Valley
-  if location_picker == "Fountain Valley" or "FV":
+  if location_picker == "Fountain Valley":
     return FV()
 
   #Create an if statement if the user wants a list from Westminster
@@ -15,7 +15,7 @@ def preexisting_list():
     return Westminster()
 
   #Create an if statement if the user wants a list from Garden Grove  
-  elif location_picker == "Garden Grove" or "GG":
+  elif location_picker == "Garden Grove":
     return Garden_Grove()
 
   #Create an if statement if the user wants a list from Santa Ana
@@ -31,56 +31,64 @@ def preexisting_list():
     return Torrance()
 
   #Create an if statement if the user wants a list from Los Angeles
-  elif location_picker == "Los Angeles" or "LA":
+  elif location_picker == "Los Angeles":
     return LA()
 
   #Create an if statement if the user wants a list from Huntington Beach
-  elif location_picker == "Huntington Beach" or "HB":
-    print(Huntington_Beach())
+  elif location_picker == "Huntington Beach":
+    return Huntington_Beach()
 
   #Create an if statement if the user wants a list from Irvine
   elif location_picker == "Irvine":
-    print(Irvine())  
+    return Irvine()  
 
 
 def Torrance():
   #Create list for Torrance
-  Torrance_list = ["Kagura", "Bowl Thai", "Torimatsu", "Azuma", "On + On Kitchen", "Boiling Point"]
+  Torrance_list = ["Kagura", "Bowl Thai", "Torimatsu", 
+  "Azuma", "On + On Kitchen", "Boiling Point"]
   return Torrance_list
 
 def Huntington_Beach():
   #Create list for Hubntington Beach
-  HB_List = ["Sushi On Fire", "Duke's Huntington Beach", "Charlie's Gyros", "Blue Gold", "Nori Poke Sushi"]
+  HB_List = ["Sushi On Fire", "Duke's Huntington Beach", "Charlie's Gyros", 
+  "Blue Gold", "Nori Poke Sushi"]
   return HB_List
   
 def Irvine():
   #Create list for Irvine 
-  Irvine_list = ["House of ShabuShabu", "Curry House CoCo Ichibanya", "Krave Asian Fusion", "Kebab Shop", "Kura Sushi"]
+  Irvine_list = ["House of ShabuShabu", "Curry House CoCo Ichibanya", 
+  "Krave Asian Fusion", "Kebab Shop", "Kura Sushi"]
   return Irvine_list
 
 def Santa_Ana():
   #Create list for Santa Ana
-  SA_list = ["Whealthy", "Kaizen Shabu", "The Block", "AYCE Sushi SCM", "Koco Sushi"]
+  SA_list = ["Whealthy", "Kaizen Shabu", "The Block",
+  "AYCE Sushi SCM", "Koco Sushi"]
   return SA_list
 
 def Garden_Grove():
   #Create list for Garden Grove
-  GG_List = ["Mochinut", "Shawarma House", "Hodori Snack", "Duck Donuts", "Cafe Orange", "Red Castle", "Star BBQ", "Boiling Point", "Rodeo 39"]
+  GG_List = ["Mochinut", "Shawarma House", "Hodori Snack", "Duck Donuts", 
+  "Cafe Orange", "Red Castle", "Star BBQ", "Boiling Point", "Rodeo 39"]
   return GG_List
 
 def Westminster():
   #Create list for Westminster
-  Westminter_list = ["Grinkgo Katsu", "Silverlake Ramen", "SoCal Wings", "Chungchun Rice Hotdog"]
+  Westminter_list = ["Grinkgo Katsu", "Silverlake Ramen", 
+  "SoCal Wings", "Chungchun Rice Hotdog"]
   return Westminter_list
 
 def FV():
   #Create list for Fountain Valley
-  Fv_list = ["Ikram Grill", "Hot-Off-the-Gril", "Vox Kitchen", "Kensho", "Nep Cafe", "Red Flame", "Sabrosada", "Taco Bell", "Project Poke", "Full Moon", "Nikado", "Dennys"]
+  Fv_list = ["Ikram Grill", "Hot-Off-the-Gril", "Vox Kitchen", "Kensho", "Nep Cafe", "Red Flame", 
+  "Sabrosada", "Taco Bell", "Project Poke", "Full Moon", "Nikado", "Dennys"]
   return Fv_list
 
 def LA():
   #Create list for Los Angeles
-  LA_list = ["Perch", "Hayoto", "Marugame Monzo", "Chinchikurin", "PASTA e PASTA by Allegro"]
+  LA_list = ["Perch", "Hayoto", "Marugame Monzo", 
+  "Chinchikurin", "PASTA e PASTA by Allegro"]
   return LA_list
 
 #Create a function that will choose which place based on a random number chosen
@@ -101,8 +109,7 @@ def main():
   
   #Create an if statement if the user wants a preexisting list
   if option1 == 'Preexisting':
-    Food_list=preexisting_list()
-    print("here")
+    Food_list = preexisting_list()
     
   else:
     #Ask the user to input how many places they can't choose 

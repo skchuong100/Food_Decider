@@ -128,7 +128,7 @@ def main():
   print("List of places:", Food_list)
   print()
   #Get specific by asking if the user is craving any type of food
-  question2 = input("Is the food/drink you are craving on the list? \nEnter Yes or No: ")
+  question2 = input("Is the food you are craving on the list? \nEnter Yes or No: ")
   #Create an empty list
   specific_list = []
   #Create a variable

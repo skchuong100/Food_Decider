@@ -128,7 +128,7 @@ def main():
   print("List of places:", Food_list)
   print()
   #Get specific by asking if the user is craving any type of food
-  question2 = input("Is the food/drink you are craving on the list? \nEnter Yes, No, or Anything (if you are fine with anything): ")
+  question2 = input("Is the food/drink you are craving on the list? \nEnter Yes or No: ")
   #Create an empty list
   specific_list = []
   #Create a variable
@@ -152,13 +152,9 @@ def main():
     food_decider1(specific_list)
    #Create an elif statement if the user is craving anything
 
-  elif question2 == "Anything":
+  elif question2 == "No":
     food_decider1(Food_list)
     #Create an else statement is the list has nothing of what the user craves
-
-  else:
-    print()
-    print("Try Again")
 
 #Call the main function
 main()
